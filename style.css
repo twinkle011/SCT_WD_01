@@ -1,0 +1,302 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(
+        135deg,
+        #12081f 0%,
+        #1f1037 25%,
+        #3b0764 55%,
+        #6d28d9 80%,
+        #db2777 100%
+    );
+    color:white;
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(18,8,31,0.85);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    z-index:1000;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:#ff71ce;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#ff71ce;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:120px 8%;
+    flex-wrap:wrap;
+}
+
+.content{
+    max-width:550px;
+}
+
+.content h3{
+    font-size:24px;
+    color:#e9d5ff;
+}
+
+.content h1{
+    font-size:75px;
+    font-weight:800;
+    color:#ff71ce;
+
+    text-shadow:
+    0 0 10px #ff71ce,
+    0 0 25px #d946ef,
+    0 0 45px #9333ea;
+}
+
+.content p{
+    margin-top:15px;
+    font-size:18px;
+    line-height:1.8;
+    color:#f3e8ff;
+}
+
+/* BUTTONS */
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    margin-right:10px;
+    padding:12px 30px;
+
+    background:linear-gradient(
+        135deg,
+        #ff71ce,
+        #d946ef
+    );
+
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.btn2{
+    background:transparent;
+    border:2px solid #ff71ce;
+}
+
+/* IMAGE */
+
+.image img{
+    width:320px;
+    height:400px;
+    object-fit:cover;
+    border-radius:25px;
+
+    border:3px solid #ff71ce;
+
+    box-shadow:
+    0 0 20px #ff71ce,
+    0 0 40px #d946ef,
+    0 0 70px #9333ea;
+
+    transition:.4s;
+}
+
+.image img:hover{
+    transform:scale(1.03);
+}
+
+/* SECTIONS */
+
+section{
+    padding:80px 8%;
+}
+
+section h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:35px;
+    color:#ff71ce;
+}
+
+/* ABOUT */
+
+#about p{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:1.9;
+    color:#f3e8ff;
+}
+
+/* SKILLS */
+
+.skill-box{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.skill{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.12);
+
+    padding:15px 25px;
+    border-radius:15px;
+
+    backdrop-filter:blur(10px);
+
+    transition:.3s;
+}
+
+.skill:hover{
+    transform:translateY(-5px);
+    border-color:#ff71ce;
+}
+
+/* CARDS */
+
+.edu-box,
+.project-box{
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(14px);
+
+    padding:25px;
+    border-radius:20px;
+
+    max-width:800px;
+    margin:20px auto;
+
+    text-align:center;
+
+    transition:.3s;
+}
+
+.edu-box:hover,
+.project-box:hover{
+    transform:translateY(-5px);
+    border-color:#ff71ce;
+}
+
+.edu-box p,
+.project-box p{
+    color:#f3e8ff;
+    line-height:1.8;
+}
+
+/* CONTACT */
+
+#contact{
+    text-align:center;
+}
+
+#contact p{
+    margin:12px 0;
+}
+
+#contact a{
+    color:#ff71ce;
+    text-decoration:none;
+}
+
+#contact a:hover{
+    text-decoration:underline;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:rgba(0,0,0,0.15);
+    color:#f3e8ff;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+    }
+
+    nav ul{
+        margin-top:10px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero{
+        text-align:center;
+        justify-content:center;
+    }
+
+    .content h1{
+        font-size:55px;
+    }
+
+    .image{
+        margin-top:40px;
+    }
+
+    .image img{
+        width:260px;
+        height:330px;
+    }
+
+    .btn{
+        display:block;
+        width:220px;
+        margin:15px auto;
+    }
+}
